@@ -1,0 +1,518 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-right: 2rem;
+  text-align: center;
+}
+/* ========== Global ========== */
+body {
+  font-family: 'Segoe UI';
+  background-color: #f9f9f9;
+  color: #1f2937;
+}
+
+/* ========== Auth Forms ========== */
+.auth-container {
+  max-width: 450px;
+  margin: 100px auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+  font-size: 24px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-form input {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.auth-form input:focus {
+  border-color: #4f46e5;
+}
+
+.auth-form button {
+  padding: 12px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #3730a3;
+}
+
+.auth-error {
+  color: #dc2626;
+  font-size: 0.9rem;
+}
+
+.forgot-password-btn {
+  background: none;
+  border: none;
+  color: #2563eb;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.forgot-password-btn:hover {
+  color: #1d4ed8;
+}
+
+/* ========== Dashboard Layout ========== */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1e3a8a;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-nav a,
+.sidebar-nav button {
+  color: white;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav .active,
+.sidebar-nav button:hover {
+  background-color: #3730a3;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+}
+
+/* ========== Product Management ========== */
+.manage-container {
+  padding: 20px;
+}
+
+.manage-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.product-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.product-form input {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  flex: 1 1 200px;
+}
+
+.product-form button {
+  padding: 10px 16px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.product-form button:hover {
+  background-color: #059669;
+}
+
+/* ========== Product Cards ========== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.product-card h4 {
+  margin: 10px 0 4px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.product-card .product-price {
+  color: #16a34a;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+.product-card button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.product-card .edit-btn {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.product-card .edit-btn:hover {
+  background-color: #d97706;
+}
+
+.product-card .delete-btn {
+  background-color: #ef4444;
+  color: white;
+  margin-left: 8px;
+}
+
+.product-card .delete-btn:hover {
+  background-color: #dc2626;
+}
+
+/* ========== User Management ========== */
+.manage-users {
+  padding: 20px;
+}
+
+.manage-users .title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+  text-align: left;
+}
+
+.user-table thead {
+  background-color: #f3f4f6;
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.delete-btn {
+  color: #dc2626;
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ========== User Profile ========== */
+.user-profile {
+  padding: 32px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.profile-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #111827;
+  text-align: center;
+}
+
+.profile-details p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #4b5563;
+}
+
+.profile-details strong {
+  color: #111827;
+}
+
+.loading-text {
+  text-align: center;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.product-page-wrapper {
+  padding: 40px;
+  background-color: #f9fafb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.search-main {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #4f46e5;
+}
+
+.search-button {
+  padding: 12px 20px;
+  background-color: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #3730a3;
+}
+
+.product-page-container {
+  padding: 20px 0;
+}
+
+.no-products {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+  font-style: italic;
+  margin-top: 30px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  transition: box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.product-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #16a34a;
+}
+
+.button {
+  margin-top: 12px;
+  padding: 10px 16px;
+  background-color: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #3730a3;
+}
+
+/* Navbar.css */
+
+.navbar {
+  width: auto;
+  background-color: #4f46e5;
+  padding: 12px 24px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Default nav links - desktop */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 2px;
+}
+
+.nav-link:hover {
+  color: #c7d2fe;
+  border-bottom: 2px solid #c7d2fe;
+}
+
+/* Toggle button for small screens */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #4f46e5;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    width: 180px;
+    z-index: 10;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 8px 12px;
+    border-bottom: none;
+  }
+
+  .nav-link:hover {
+    background-color: #3730a3;
+    border-radius: 4px;
+  }
+}
