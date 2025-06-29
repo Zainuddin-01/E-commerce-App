@@ -2,7 +2,6 @@
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { logout } from '../../redux/action/AuthAction';
-import { Link } from 'react-router-dom';
 import '../../App.css';
 
 const DashboardLayout = () => {
