@@ -67,11 +67,12 @@ const DashboardLayout = () => {
 
           {/* Logout Button */}
           <button
-            onClick={handleLogout}
-            style={{
+          onClick={handleLogout}
+          className='btn'
+          style={{
               marginTop: '20px',
               padding: '10px 15px',
-              backgroundColor: '#ef4444',
+              backgroundColor: '#3730a3',
               color: '#fff',
               border: 'none',
               borderRadius: '4px',

@@ -36,9 +36,6 @@ const Navbar = () => {
           <>
             <Link to="/dashboard" className="nav-link" onClick={() => setIsMenuOpen(false)}>Dashboard</Link>
             <Link to="/Product" className="nav-link" onClick={() => setIsMenuOpen(false)}>Products</Link>
-            <Link onClick={handleLogout}  className="nav-link" >
-              Logout
-            </Link>
           </>
         )}
       </nav>
