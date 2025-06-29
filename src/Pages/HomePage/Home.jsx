@@ -11,15 +11,19 @@ const Home = () => {
     const filtered = products.filter(product =>
       !product.hidden &&
       (product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-       product.description.toLowerCase().includes(searchTerm.toLowerCase()))
+        product.description.toLowerCase().includes(searchTerm.toLowerCase()))
     );
     setSearchResults(filtered);
   };
 
-  const displayedProducts = searchTerm ? searchResults : products.filter(p => !p.hidden);
+  const displayedProducts = searchTerm ? searchResults : products.filter(p => !p.hidden).slice(0, 4);
 
   return (
-     <div className="product-page-wrapper">
+    <div className="product-page-wrapper">
+      <h1 className="home-heading">
+        Shop smart with our e-commerce mobile store — fast, easy, <br />
+        and always at your fingertips.
+      </h1>
       {/* Search Bar Section */}
       <main className="search-main">
         <div className="search-bar">
@@ -53,6 +57,14 @@ const Home = () => {
                 </button>
               </div>
             ))}
+          </div>
+
+        )}
+        {!searchTerm && displayedProducts.length > 0 && (
+          <div style={{ textAlign: 'center', marginTop: '20px' }}>
+            <Link to="/product" className="view-all-button">
+              Shop Now
+            </Link>
           </div>
         )}
       </div>

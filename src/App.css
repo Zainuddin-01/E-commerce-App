@@ -5,6 +5,7 @@
   padding-right: 2rem;
   text-align: center;
 }
+
 /* ========== Global ========== */
 body {
   font-family: 'Segoe UI';
@@ -430,6 +431,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .button:hover {
   background-color: #3730a3;
 }
@@ -437,6 +439,7 @@ body {
 
 /* 📱 Mobile Devices (max-width: 480px) */
 @media (max-width: 480px) {
+
   .auth-container,
   .user-profile {
     margin: 40px 10px;
@@ -601,5 +604,43 @@ body {
   .nav-link:hover {
     background-color: #3730a3;
     border-radius: 4px;
+  }
+}
+
+.view-all-button {
+  display: inline-block;
+  background-color: #4f46e5;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-top: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.view-all-button:hover {
+  background-color: #3730a3;
+}
+
+.home-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4f46e5;
+  text-align: center;
+  margin: 30px 0;
+  line-height: 1.5;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .home-heading {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-heading {
+    font-size: 3rem;
   }
 }
