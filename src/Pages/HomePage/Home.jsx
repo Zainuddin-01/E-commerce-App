@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div className="product-page-wrapper">
       <h1 className="home-heading">
-        Shop smart with our e-commerce mobile store — fast, easy, <br />
+        Shop smart with mobozo mobile store — fast, easy, <br />
         and always at your fingertips.
       </h1>
       {/* Search Bar Section */}
